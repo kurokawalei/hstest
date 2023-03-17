@@ -175,6 +175,12 @@ h2{
   }
 }
 
+.mySwiper {
+
+ @include xxxl(){
+  height: calc( 100vh - 76px );
+ }
+}
 
 
 
