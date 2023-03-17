@@ -36,6 +36,9 @@ h2{
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 100%;
+  @include mob(){
+    font-size: 1.4rem;
+  }
 }
 
 .mobMenu {
@@ -192,6 +195,10 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
+  @include mob(){
+    height: auto;
+    display: block;
+  }
 
   #fourCircle {
     position: absolute;
@@ -271,7 +278,7 @@ h2{
       margin: 3px 0;
       text-decoration: none;
       &:hover {
-        fill: #43b2b9;
+        fill: #ffc107;
         transition: all 0.35s ease;
       }
     }
@@ -300,10 +307,82 @@ h2{
 
 
 video {
+  filter: saturate(0.4);
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   object-fit: cover;
   position: absolute;
+  @include mob(){
+    display: none;
+  }
+}
+
+
+#accordion {
+  .accordion-item {
+
+    .accordion-button {
+      border: none;
+      &:not(.collapsed){
+        background-color: transparent;
+        box-shadow: none;
+     
+        &:after {
+        background-image: url(../images/dash-lg.svg);
+
+        }
+      }
+      &:after {
+        background-image: url(../images/plus-lg.svg);
+
+      }
+    flex-wrap: wrap;
+    &:after {
+      transform: translateY(-30px);
+    }
+    span {
+      display: block;
+      color: #ffa81d;
+      font-weight: 700;
+      font-size: 1.6rem;
+      flex: 100%;
+    }
+    .title {
+      flex: 100%;
+      color: #1a6a89;
+      font-size: 1.6rem;
+    }
+    .smTitle {
+      color: #ccc;
+      font-size: 0.8rem;
+    }
+   
+    }
+
+    .titleIcon {
+      @include mob(){
+        padding-left: 15px
+      }
+    }
+
+    .accordion-body {
+      ul {
+        @include ulstyle();
+        li {
+          padding-left: 55px;
+          a {
+            text-decoration: none;
+            color: #666;
+            padding: 5px 0 ;
+            display: block;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+   
+  }
+
 }
