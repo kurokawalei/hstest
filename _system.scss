@@ -1,0 +1,142 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+@mixin enfont() {
+  font-family: 'Crimson Pro', serif;
+}
+
+
+
+@mixin ulstyle() {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.mt-6 {
+  margin-top: 3.5rem !important;
+}
+.mb-6 {
+  margin-bottom: 3.5rem !important;
+}
+.mt-6 {
+  margin-top: 3.5rem !important;
+}
+.mb-7 {
+  margin-bottom: 4rem !important;
+}
+
+$maxWidth: (
+  380,
+  500,
+  600,
+  852,
+  900,
+  1025,
+  1050,
+  1070,
+  1075,
+  1090,
+  1100,
+  1122,
+  1134,
+  1170,
+  1175,
+  1200,
+  1220,
+  1230,
+  1240,
+  1280,
+  1290,
+  1300,
+  1340,
+  1370,
+  1373,
+  1396,
+  1400,
+  1416,
+  1420,
+  1424,
+  1450,
+  1485,
+  1500,
+  1506,
+  1540,
+  1600,
+  1690,
+  1700,
+  1705,
+  1740,
+  1800
+);
+
+@each $value in $maxWidth {
+  .maxW-#{$value} {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $value + px;
+  }
+}
+
+// @media (min-width: 1700px) {
+//   .container {
+//     max-width: 100%;
+//   }
+// }
+
+@mixin xxl-up() {
+  @media (min-width: 1921px) {
+    @content;
+  }
+}
+
+@mixin xxl() {
+  @media (min-width: 1400px) and (max-width: 1699.98px) {
+    @content;
+  }
+}
+
+@mixin xl() {
+  @media (min-width: 1200px) and (max-width: 1399.98px) {
+    @content;
+  }
+}
+
+@mixin xl-pad-down() {
+  @media (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin xl-pad() {
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin pad() {
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin mob() {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin sm-mob() {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+@mixin ssm-mob() {
+  @media (max-width: 350.98px) {
+    @content;
+  }
+}
