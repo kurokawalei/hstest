@@ -1,178 +1,185 @@
 .banner {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include mob(){
-      height: auto;
-      display: block;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mob() {
+    height: auto;
+    display: block;
+  }
+
+  #fourCircle {
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    transition: width 0.35s ease;
+    @include xxl() {
+      width: 60%;
     }
-  
-    #fourCircle {
-      position: absolute;
-      z-index: 2;
-      width: 50%;
-      transition: width 0.35s ease;
-      @include xxl(){
-        width: 60%;
-      }
-      @include xl(){
-        width: 80%;
-      }
-      @include xl-pad(){
-        width: 80%;
-      }
-      @include pad(){
-        width: 80%;
-      }
-      @include mob(){
-        display: none;
-      }
+    @include xl() {
+      width: 80%;
+    }
+    @include xl-pad() {
+      width: 80%;
+    }
+    @include pad() {
+      width: 80%;
+    }
+    @include mob() {
+      display: none;
+    }
 
-    
-
-
-  
-      #n1box,
-      #n2box,
-      #n3box,
-      #n4box {
+    #n1box,
+    #n2box,
+    #n3box,
+    #n4box {
+      cursor: pointer;
+      #n1,
+      #n2,
+      #n3,
+      #n4 {
         cursor: pointer;
+        transition: all 0.35s ease;
+      }
+      &:hover {
         #n1,
         #n2,
         #n3,
         #n4 {
-          cursor: pointer;
+          fill: #43b2b9;
           transition: all 0.35s ease;
         }
-        &:hover {
-          #n1,
-          #n2,
-          #n3,
-          #n4 {
-            fill: #43b2b9;
-            transition: all 0.35s ease;
-          }
-          rect {
-            fill: transparent !important;
-            stroke: #fff !important;
-            transition: all 0.35s ease;
-          }
-          path {
-            stroke: #fff !important;
-            transition: all 0.35s ease;
-          }
+        rect {
+          fill: transparent !important;
+          stroke: #fff !important;
+          transition: all 0.35s ease;
         }
-      }
-    }
-  
-    #changeImg {
-     
-        transition: all 0.35s ease;
-        opacity: 1;
-      
-    }
-  
-    #n1light , #n2light ,  #n3light ,  #n4light {
-      fill: #fff;
-      &.active {
-        fill:#1a6a89;
-      }
-    }
-  
-    #opacitytext1,
-    #opacitytext2,
-    #opacitytext3 {
-      display: none;
-      line {
-        stroke: #1a6a89;
-      }
-      text {
-        fill: #1a6a89;
-      }
-      a {
-        fill: #1a6a89;
-        transition: all 0.35s ease;
-        margin: 3px 0;
-        text-decoration: none;
-        &:hover {
-          fill: #ffc107;
+        path {
+          stroke: #fff !important;
           transition: all 0.35s ease;
         }
       }
     }
-  
-    .n1MenuBox {
-      position: absolute;
-      z-index: 3;
-      top: 50%;
-      left: 50%;
-      transform: translate(40%, -480%);
-  
-      .number {
-        color: #43b2b9;
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
-      .title {
-        font-size: 1.5rem;
-        color: #fff;
-        transform: translateY(-10px);
-      }
-    }
+  }
 
-    g#m1 , g#m1-2 ,g#m1-3 ,g#m1-4 {
+  #changeImg {
+    transition: all 0.35s ease;
+    opacity: 1;
+  }
+
+  #n1light,
+  #n2light,
+  #n3light,
+  #n4light {
+    fill: #fff;
+    &.active {
       fill: #1a6a89;
-      text {
-        font-weight: 700;
-        fill: #ffc40e;
-       
-      }
-      tspan.cls-16  {
-        fill: #1a6a89;
-        font-weight: 700;
+    }
+  }
+
+  #opacitytext1,
+  #opacitytext2,
+  #opacitytext3 {
+    display: none;
+    line {
+      stroke: #1a6a89;
+    }
+    text {
+      fill: #1a6a89;
+    }
+    a {
+      fill: #1a6a89;
+      transition: all 0.35s ease;
+      margin: 3px 0;
+      text-decoration: none;
+      &:hover {
+        fill: #ffc107;
+        transition: all 0.35s ease;
       }
     }
-
-  
-
-
   }
-  
-  video {
-    filter: saturate(0.4);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
+
+  .n1MenuBox {
     position: absolute;
-    @include mob(){
-      display: none;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(40%, -480%);
+
+    .number {
+      color: #43b2b9;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .title {
+      font-size: 1.5rem;
+      color: #fff;
+      transform: translateY(-10px);
     }
   }
-  
-  #accordion {
-    .accordion-item {
-  
-      .accordion-button {
-        border: none;
-        &:not(.collapsed){
-          background-color: transparent;
-          box-shadow: none;
-       
-          &:after {
-          background-image: url(../images/dash-lg.svg);
-  
-          }
+
+  g#m1,
+  g#m1-2,
+  g#m1-3,
+  g#m1-4 {
+    fill: #1a6a89;
+    text {
+      font-weight: 700;
+      fill: #ffc40e;
+    }
+    tspan.cls-16 {
+      fill: #1a6a89;
+      font-weight: 700;
+    }
+  }
+}
+
+video {
+  filter: saturate(0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  @include mob() {
+    display: none;
+  }
+}
+
+#accordion {
+  .accordion-header {
+    &:hover {
+     .d-flex {
+      .titleIcon {
+        background-color: #43b2b9;
+        border-color: #43b2b9;
+        transition:  all 0.35s ease;
+        i {
+          color: #fff;
         }
+
+      }
+     }
+    }
+  }
+  .accordion-item {
+    .accordion-button {
+      border: none;
+      &:not(.collapsed) {
+        background-color: transparent;
+        box-shadow: none;
+
         &:after {
-          background-image: url(../images/plus-lg.svg);
-  
+          background-image: url(../images/dash-lg.svg);
         }
+      }
+      &:after {
+        background-image: url(../images/plus-lg.svg);
+      }
       flex-wrap: wrap;
       &:after {
         transform: translateY(-30px);
@@ -193,32 +200,38 @@
         color: #ccc;
         font-size: 0.8rem;
       }
-     
+    }
+
+    .titleIcon {
+   @include mob() {
+    padding-left: 0;
+    border: #ccc solid 1px;
+    text-align: center;
+    margin-left: 15px;
+    border-radius: 50vw;
+    width: 38px;
+    height: 38px;
+    i {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
       }
-  
-      .titleIcon {
-        @include mob(){
-          padding-left: 15px
-        }
-      }
-  
-      .accordion-body {
-        ul {
-          @include ulstyle();
-          li {
-            padding-left: 55px;
-            a {
-              text-decoration: none;
-              color: #666;
-              padding: 5px 0 ;
-              display: block;
-              font-size: 1.2rem;
-            }
+    }
+
+    .accordion-body {
+      ul {
+        @include ulstyle();
+        li {
+          padding-left: 55px;
+          a {
+            text-decoration: none;
+            color: #666;
+            padding: 5px 0;
+            display: block;
+            font-size: 1.2rem;
           }
         }
       }
-     
     }
-  
   }
-  
+}
