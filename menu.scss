@@ -164,13 +164,17 @@ h2{
 
   @include mob() {
     width: 320px;
+    .btn {
+      font-size: 0.8rem;
+      background-color: #eee;
+    }
   }
 }
 
 #dropdownMenuButton2 {
   & ~ .dropdown-menu.show {
     @include mob() {
-      transform: translate3d(-24%, 40px, 0px) !important;
+      transform: translate3d(-24%, 53px, 0px) !important;
     }
   }
 }
