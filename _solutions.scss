@@ -31,6 +31,10 @@
       @include mob(){
         display: none;
       }
+
+    
+
+
   
       #n1box,
       #n2box,
@@ -83,8 +87,14 @@
     #opacitytext2,
     #opacitytext3 {
       display: none;
+      line {
+        stroke: #1a6a89;
+      }
+      text {
+        fill: #1a6a89;
+      }
       a {
-        fill: #fff;
+        fill: #1a6a89;
         transition: all 0.35s ease;
         margin: 3px 0;
         text-decoration: none;
@@ -114,14 +124,20 @@
       }
     }
 
-    g#m1 {
+    g#m1 , g#m1-2 ,g#m1-3 ,g#m1-4 {
+      fill: #1a6a89;
       text {
         font-weight: 700;
         fill: #ffc40e;
        
       }
+      tspan.cls-16  {
+        fill: #1a6a89;
+        font-weight: 700;
+      }
     }
 
+  
 
 
   }
