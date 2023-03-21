@@ -184,6 +184,26 @@ h2{
  @include xxxl(){
   height: calc( 100vh - 76px );
  }
+
+ .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    text-align: left;
+    padding-left: 5vw;
+    bottom: 25px;
+    margin-right: 20px;
+ }
+ 
+ span.swiper-pagination-bullet {
+  background-color: #fff;
+  transition: all 0.35s ease;
+  opacity: .9;
+  
+  &.swiper-pagination-bullet-active {
+    width: 50px;
+    transition: all 0.35s ease;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+ }
 }
 
 
