@@ -208,6 +208,76 @@ h2{
 
 
 
+.buildBox {
+  margin: 50px 0;
+  .buildBoxLogo {
+    margin-left: 50px;
+  }
+  .buildBoxTextMain {
+    margin-left: 50px;
+    padding: 30px 0;
+    p {
+      margin: 0;
+      color: #00BFA6;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .comesoon {
+      margin-top: 20px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      span {
+        opacity: 0;
+        &:first-child {
+          animation:  shine infinite linear alternate   1s;
+          animation-delay: -1s;
+         
+        }
+        &:nth-child(2) {
+          animation-delay: 1s;
+          animation:  shine infinite linear alternate   1s;
+          animation-delay: -0.8s;
+        }
+
+        &:nth-child(3) {
+          animation-delay: 2s;
+           animation:  shine infinite linear alternate   1s;
+          animation-delay: -0.6s;
+        }
+        @keyframes shine {
+
+          50%{
+            opacity: 0;
+          }
+          100%{
+            opacity: 1;
+          }
+          
+        }
+      }
+    }
+  }
+
+
+  #buildSvg {
+
+    #returnbuild {
+      animation: rotate 3s linear infinite alternate;
+      transform-origin: 30px 30px;
+      transform: translateY(-10px);
+    }
+
+    @keyframes rotate {
+      100%{
+        transform: rotate(10deg);
+      }
+      
+    }
+   
+  }
+}
+
+
 
 
 
